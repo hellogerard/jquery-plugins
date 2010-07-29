@@ -19,7 +19,7 @@
     $.fn.stemmer = function(options) {
         var target = $(this);
 
-        $('#' + options.source).keyup(function() {
+        $('#' + options.source).bind('keyup blur', function() {
             value = $('#' + options.source).val();
 
             value = value.toLowerCase();
